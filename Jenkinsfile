@@ -3,8 +3,8 @@ pipeline {
         kubernetes {
             label 'jenkins-demo'
             containerTemplate {
-                name '6-alpine'
-                image 'node:6-alpine'
+                name 'test'
+                image 'gcr.io/ipay-project/github-thusharaama-jenkins:c0506cff838a6e0ae93e3e50b0247ce142516ac7'
                 ttyEnabled true
                 command 'cat'
             }
