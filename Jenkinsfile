@@ -3,8 +3,8 @@ pipeline {
         kubernetes {
             label 'jenkins-demo'
             containerTemplate {
-                name 'dind-jdk8-maven3'
-                image 'eu.gcr.io/jenkins-demo/dind-jdk8-maven3:v4'
+                name '6-alpine'
+                image 'node:6-alpine'
                 ttyEnabled true
                 command 'cat'
             }
