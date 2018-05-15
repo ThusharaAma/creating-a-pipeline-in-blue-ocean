@@ -1,15 +1,10 @@
 pipeline {
   agent {
-    kubernetes {
-      //cloud 'kubernetes'
-      label 'mypod'
-      containerTemplate {
-        name 'maven'
-        image 'maven:3.3.9-jdk-8-alpine'
-        ttyEnabled true
-        command 'cat'
-      }
+    docker {
+      image 'node:6-alpine'
+      args '-p 3000:3000'
     }
+
   }
   stages {
     stage('Build') {
