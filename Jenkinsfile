@@ -1,6 +1,6 @@
 pipeline {
   agent {
-      label "jnlp"
+      label "jnlp-slave"
   }
   stages {
     stage('Build') {
